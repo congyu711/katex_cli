@@ -21,6 +21,7 @@ fn main() {
     let macros = std::collections::HashMap::<String, String>::from(macros_key_value);
 
     let opts_base = katex::Opts::builder().
+                       min_rule_thickness(0.1).
                        output_type(katex::opts::OutputType::Html).
                        throw_on_error(false).
                        macros(macros).
